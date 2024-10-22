@@ -2,19 +2,22 @@
 import '@styles/Navbar.css';
 import Logo from '@public/images/logo.png';
 import Link from 'next/link';
-import { UserCircleIcon } from '@heroicons/react/24/solid'
+import { UserCircleIcon } from '@heroicons/react/24/solid';
 import { useEffect } from 'react';
+import Image from 'next/image';
 import $ from 'jquery';
 
 function Navbar() {
 
     useEffect(() => {
-        // Use type checks to ensure the jQuery selections are not undefined
+        // Ensure jQuery selections are valid
         const $openNav = $("#open-nav");
         const $closeNav = $("#close-nav");
         const $navElements = $(".nav-elements");
-        const $window:any = $(window);
-        
+
+        // Native Window object, used for direct window operations
+        const windowWidth: number = window.innerWidth;
+
         if ($openNav.length > 0) {
             $openNav.on("click", function() {
                 $navElements.slideDown(400).css({ display: "flex" });
@@ -27,7 +30,7 @@ function Navbar() {
             });
         }
 
-        if ($window.width() < 950) {
+        if (windowWidth < 950) {
             $navElements.find("ul li:not(.special)").on("click", function() {
                 $navElements.slideUp(400);
             });
@@ -39,7 +42,7 @@ function Navbar() {
 
         $navElements.find("ul li .inner-eles a").on("click", function() {
             $(".nav-elements ul li .inner-eles").removeClass("active");
-            if ($window.width() < 950) {
+            if (windowWidth < 950) {
                 $navElements.slideUp(400);
             }
         });
@@ -57,12 +60,12 @@ function Navbar() {
                 <div className='container'>
                     <div className='nav-content'>
                         <div className='logo'>
-                            <img src={Logo.src} alt='logo' />
+                            <Image src={Logo.src} alt='logo' width={100} height={40} />
                         </div>
 
                         <button id="open-nav"> <i className="las la-bars"></i> </button>
                         <div className='nav-elements'>
-                        <button id="close-nav"> <i className="las la-times"></i> </button>
+                            <button id="close-nav"> <i className="las la-times"></i> </button>
                             <ul>
                                 <li>
                                     <Link href="#"> الرئيسية  </Link>
@@ -89,13 +92,13 @@ function Navbar() {
                                 </li>
 
                                 <li>
-                                    <Link href="#" className='btn-link'>  الشهادات  <img src={Logo.src} alt='logo' />  </Link>
+                                    <Link href="#" className='btn-link'>  الشهادات  <Image src={Logo.src} alt='logo' width={20} height={20}/>  </Link>
                                 </li>
                             </ul>
                         </div>
 
                         <div className='options'>
-                            <Link href="#"> <UserCircleIcon className='icon'/> </Link>
+                            <Link href="#"> <UserCircleIcon className='icon' /> </Link>
                             <Link href="#"> En </Link>
                         </div>
                     </div>

@@ -1,12 +1,27 @@
 import { CalendarDaysIcon, ComputerDesktopIcon, GlobeEuropeAfricaIcon } from '@heroicons/react/24/solid'
 import Link from 'next/link'
 import React from 'react'
-import '@styles/Card.css';
+import Image from 'next/image'
+import '@styles/Card.css'
 
-const Card = (props:any) => {
+interface CardProps {
+    img: {
+        src: string;
+    };
+    category: string;
+    title: string;
+    description: string;
+    date: string;
+    language: string;
+    platform: string;
+    key: number;
+
+}
+
+const Card: React.FC<CardProps> = (props) => {
     return (
-        <div className='course-card'>
-            <img src={props.img.src} alt='card image' />
+        <div key={props.key} className='course-card'>
+            <Image src={props.img.src} alt='card image' width={500} height={300} />
 
             <div className='text'>
                 <span className='category'> {props.category}</span>
@@ -30,9 +45,7 @@ const Card = (props:any) => {
                         <span>{props.platform}</span>
                     </li>
                 </ul>
-
-
-            </div>
+            </div>  
 
             <Link href="#"> مشاهدة الدورة </Link>
         </div>

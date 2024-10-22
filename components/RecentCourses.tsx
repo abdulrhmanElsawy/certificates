@@ -7,8 +7,6 @@ import '@styles/RecentCourses.css';
 
 
 
-import LandingImg from '@public/images/landing.webp';
-
 import Landing1Img from '@public/images/landing-1.webp';
 import Landing2Img from '@public/images/landing-2.webp';
 import Landing3Img from '@public/images/landing-3.webp';
@@ -116,7 +114,7 @@ const RecentCourses = () => {
                     >
 
                     {courses.map((course, index) => (
-                        <SwiperSlide>
+                        <SwiperSlide key={index}>
                             <Card key={index} language={course.language} date={course.date} platform={course.platform} img={course.img} title={course.title} description={course.description}  category={course.category} />
                         </SwiperSlide>
                     ))}

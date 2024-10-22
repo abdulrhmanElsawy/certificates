@@ -7,7 +7,6 @@ import '@styles/RecentCourses.css';
 
 
 
-import LandingImg from '@public/images/landing.webp';
 
 import Landing1Img from '@public/images/landing-1.webp';
 import Landing2Img from '@public/images/landing-2.webp';
@@ -110,7 +109,7 @@ const RecentBlogs = () => {
                     >
 
                     {articles.map((article, index) => (
-                        <SwiperSlide>
+                        <SwiperSlide key={index}>
                             <Card key={index} language={article.language} date={article.date} platform={article.platform} img={article.img} title={article.title} description={article.description}  category={article.category} />
                         </SwiperSlide>
                     ))}
