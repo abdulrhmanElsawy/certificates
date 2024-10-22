@@ -1,0 +1,102 @@
+
+
+.certificates .overlay{
+    background: rgb(0,0,0);
+    background: -moz-linear-gradient(58deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.04525560224089631) 100%);
+    background: -webkit-linear-gradient(58deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.04525560224089631) 100%);
+    background: linear-gradient(58deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.04525560224089631) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1);
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.certificates .images{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    opacity: 0.3;
+    height: 100%;
+}
+
+.certificates .images img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    inset: 0;
+    filter: brightness(0.8);
+    opacity: 0.3;
+}
+
+
+
+.certificates h1{
+    padding-top: 50px;
+    text-align: right;
+    color: #fff;
+    z-index: 1;
+    position: relative;
+}
+
+
+.certificates .categories{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 53px;
+    border-radius: 50px;
+    overflow: hidden;
+    z-index: 3;
+}
+
+
+.certificates .categories .category{
+    position: relative;
+    width: calc(48% - 34px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 15px;
+    text-align: right;
+    height: 242px;
+    border: 4px solid #fff;
+    border-radius: 35px;
+    color: #fff;
+    padding: 30px;
+    margin: 21px;
+    cursor: pointer;
+    background-color:trasparent;
+    transition:0.5s;
+}
+
+.certificates .categories .category:hover{
+    background-color: #17dcaf;
+
+}
+
+.certificates .categories .category svg{
+    width: 27px;
+    height: 26px;
+}
+
+.certificates .categories .category h2{
+    font-size: 17px;
+}
+.certificates .categories .category p{
+    font-size: 15px;
+    direction: rtl;
+}
+
+
+
+
+
+@media(max-width:950px){
+    .certificates .categories .category {
+        width: 100%;
+    }
+}

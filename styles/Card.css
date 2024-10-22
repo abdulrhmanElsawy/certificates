@@ -1,0 +1,83 @@
+.course-card{
+    width: 370px;
+    height: 602px;
+    background-color: #fff;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.course-card>img{
+
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.course-card .text{
+    padding: 17px;
+    text-align: right;
+    direction: rtl;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.course-card .text>span{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    min-width: 90px;
+    font-size: 12px;
+    height: 27px;
+    background-color: #17dcaf21;
+    color: #17dcaf;
+    border-radius: 50px;
+    margin-bottom: 13px;
+}
+
+.course-card .text h1{
+    font-size: 19px;
+    color: #000;
+}
+
+.course-card .text p{
+    font-size: 14px;
+    height: 60px;
+    overflow: hidden;
+}
+
+.course-card .text ul{
+    margin: 0;
+}
+
+.course-card .text ul li{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+
+.course-card .text ul li svg{
+    width: 18px;
+}
+
+
+
+.course-card>a{
+    margin: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #17dcaf;
+    font-variant: diagonal-fractions;
+    font-size: 14px;
+    font-weight: 400;
+    color: #17dcaf;
+    height: 47px;
+    border-radius: 50px;
+}

@@ -1,0 +1,95 @@
+footer{
+    position: relative;
+    z-index: 1;
+    margin-top: 50px;
+
+}
+
+footer .footer-content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+    gap: 20px;
+}
+
+footer .footer-content h2{
+    font-size: 18px;
+    color: #fff;
+}
+
+footer .footer-content ul{
+    padding: 0;
+    direction: rtl;
+}
+
+
+footer .footer-content ul li{
+    
+}
+
+footer .footer-content ul li a{
+    font-size: 13px;
+    width: 100%;
+    display: flex;
+    text-align: right;
+    width: 80%;
+    margin-bottom: 18px;
+    color: #dbdbdb;
+}
+
+footer .footer-content .input{
+    position: relative;
+    width: 100%;
+}
+
+
+footer .footer-content .input input{
+    width: 100%;
+    height: 55px;
+    text-align: right;
+    border-radius: 50px;
+    padding-right: 20px;
+}
+
+footer .footer-content .input svg{
+    width: 21px;
+    position: absolute;
+    top: 55%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #9e9e9e;
+}
+
+
+footer .footer-content p{
+    direction: rtl;
+    color: #fff;
+    font-size: 14px;
+}
+
+footer .footer-content .socials{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+
+footer .footer-content .socials a{
+    font-size: 30px;
+    color: #fff;
+}
+
+
+footer .copy-right h4{
+    margin-top: 60px;
+    text-align: center;
+    width: 100%;
+    color: #fff;
+    direction: rtl;
+    font-size: 15px;
+    font-weight: 400;
+}
