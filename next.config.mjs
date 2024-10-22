@@ -2,8 +2,8 @@ const isProd = process.env.NODE_ENV === 'production';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    basePath: isProd ? '/demo-test' : '',
-    assetPrefix: isProd ? '/demo-test' : '',
+    basePath: isProd ? '/certificates' : '',
+    assetPrefix: isProd ? '/certificates' : '',
 
     images: {
         domains: ['lh3.googleusercontent.com'],
@@ -21,7 +21,7 @@ const nextConfig = {
             use: 'file-loader',
         });
         
-        config.output.publicPath = isProd ? '/demo-test/_next/' : '/_next/';
+        config.output.publicPath = isProd ? '/certificates/_next/' : '/_next/';
 
         return config;
     },
